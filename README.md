@@ -1,4 +1,4 @@
-SpiderKillGames est un FPS (First Person Shooter) en VR adapté actuellement pour le HTC Vive.
+SpiderKillGames est un FPS (First Person Shooter) en VR adapté actuellement pour le HTC Vive et la Gear VR.
 Le jeu a été réalisé dans le cadre du cours d'Interaction Multimodale et Affective.
 Le but étant de résaliser un jeu qui s'adapte au stress de l'utilisateur.
 
