@@ -5,10 +5,6 @@ public class GunScript : MonoBehaviour {
 
 	// Use this for initialization
 	
-	public GameObject controllerRight;
-	private SteamVR_TrackedObject obj;
-	private SteamVR_Controller.Device device;
-	private SteamVR_TrackedController controller;
 	public Transform muzzleTransform;
 	public float damage = 25f;
 	public float range = 100f;
@@ -18,13 +14,8 @@ public class GunScript : MonoBehaviour {
 	public float impactForce = 60f;
 	private float nextTimeToFire = 0f;
 
-	void Start() {
-		controller = controllerRight.GetComponent<SteamVR_TrackedController>();	
-		obj = controllerRight.GetComponent<SteamVR_TrackedObject>();
-	}
-
 	private void Update() {
-		if (controller.triggerPressed && Time.time >= nextTimeToFire) {
+		if (OVRInput.Get(OVRInput.Button.SecondaryHandTrigger) && Time.time >= nextTimeToFire) {
 			nextTimeToFire = Time.time + 1f/fireRate + 0.05f;
 			Shoot();
 		}
@@ -33,8 +24,6 @@ public class GunScript : MonoBehaviour {
 	void Shoot() {
 		muzzleflash.Play();
 		RaycastHit hit;
-		device = SteamVR_Controller.Input((int) obj.index);
-		device.TriggerHapticPulse(3000);
 
 		if (Physics.Raycast(muzzleTransform.position, muzzleTransform.forward, out hit, range)) {
 			ControlSpider control = hit.transform.GetComponent<ControlSpider>();

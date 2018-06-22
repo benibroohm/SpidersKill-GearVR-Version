@@ -4,10 +4,10 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 12d51de019ae5854d8e35d1625fb2842
+  productGUID: 2aa72047d93eb6b4cb4598f00ffe1b63
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -46,7 +46,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 1
+  m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
@@ -148,8 +148,8 @@ PlayerSettings:
       depthFormat: 1
       depthBufferSharingEnabled: 0
     oculus:
-      sharedDepthBuffer: 0
-      dashSupport: 0
+      sharedDepthBuffer: 1
+      dashSupport: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   m_ColorGamuts: 00000000
@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Company.ProductName
+    Android: com.vision.spidterminate
     Standalone: unity.Valve.SteamVR
     Tizen: com.Company.ProductName
     iOS: com.Company.ProductName
@@ -166,9 +166,9 @@ PlayerSettings:
   buildNumber:
     iOS: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 16
+  AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -244,7 +244,7 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 0
-  clonedFromGUID: 00000000000000000000000000000000
+  clonedFromGUID: 3355557de5a687e44a6eface0a816616
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -268,16 +268,20 @@ PlayerSettings:
       m_Icon: {fileID: 0}
       m_Width: 1
       m_Height: 1
-      m_Kind: 58310
+      m_Kind: 400
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
     m_DynamicBatching: 1
-  m_BuildTargetGraphicsAPIs: []
+  m_BuildTargetGraphicsAPIs:
+  - m_BuildTarget: AndroidPlayer
+    m_APIs: 0b00000015000000
+    m_Automatic: 1
   m_BuildTargetVRSettings:
   - m_BuildTarget: Android
-    m_Enabled: 0
-    m_Devices: []
+    m_Enabled: 1
+    m_Devices:
+    - Oculus
   - m_BuildTarget: Metro
     m_Enabled: 0
     m_Devices: []
@@ -303,7 +307,7 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - None
-    - OpenVR
+    - Oculus
   - m_BuildTarget: Tizen
     m_Enabled: 0
     m_Devices: []
@@ -630,7 +634,7 @@ PlayerSettings:
   webGLUseWasm: 0
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT;VRTK_DEFINE_SDK_STEAMVR;VRTK_DEFINE_STEAMVR_PLUGIN_1_2_1_OR_NEWER;VRTK_DEFINE_STEAMVR_PLUGIN_1_2_2_OR_NEWER;VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
+    1: CROSS_PLATFORM_INPUT;VRTK_DEFINE_OCULUS_UTILITIES_1_12_0_OR_NEWER;VRTK_DEFINE_SDK_OCULUS;VRTK_DEFINE_SDK_OCULUS_AVATAR;VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     13: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
@@ -640,7 +644,6 @@ PlayerSettings:
     19: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     20: MOBILE_INPUT;VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     21: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
-    22: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     23: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     24: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
     25: VRTK_VERSION_3_2_1;VRTK_VERSION_3_2_1_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER
